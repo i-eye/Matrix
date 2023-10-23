@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddbeaxqlggx5v"]
 
-[ext_resource type="Script" path="res://calculating_screen.gd" id="1_y5fas"]
+[ext_resource type="Script" path="res://Scripts/calculating_screen.gd" id="1_kalt2"]
 
 [node name="calculatingScreen" type="Node2D"]
-script = ExtResource("1_y5fas")
+script = ExtResource("1_kalt2")
 
 [node name="Answer" type="RichTextLabel" parent="."]
 offset_left = 87.0
