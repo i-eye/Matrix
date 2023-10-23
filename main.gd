@@ -28,17 +28,10 @@ func _on_matrix_size_value_changed(val):
 		# only add needed children
 		for i in range(size*(size+1) - prevSize*(prevSize+1)):
 			addFromMatrix()
-		# adjust position of matrix to be centered
-		# this loop is done to prevent problems when skipping to e.g 1 --> 5
-		for i in range(size - prevSize):
-			$Matrix.position.x = $Matrix.position.x - 32
 	elif size < prevSize:
 		# opposite of adding
 		for i in range(prevSize*(prevSize+1) - size*(size+1)):
 			removeFromMatrix()
-		# adjust position of matrix to be centered
-		for i in range(prevSize - size): 
-			$Matrix.position.x = $Matrix.position.x + 32
 	prevSize = size
 	
 	# add children to matrix

@@ -29,10 +29,12 @@ offset_bottom = 495.0
 text = "Begin!"
 
 [node name="Matrix" type="GridContainer" parent="."]
-offset_left = 447.0
-offset_top = 203.0
-offset_right = 646.0
-offset_bottom = 402.0
+anchors_preset = -1
+offset_left = 446.0
+offset_top = 209.0
+offset_right = 655.0
+offset_bottom = 324.0
+grow_horizontal = 2
 size_flags_horizontal = 2
 size_flags_vertical = 3
 columns = 3
@@ -55,6 +57,15 @@ layout_mode = 2
 [node name="LineEdit6" type="LineEdit" parent="Matrix"]
 layout_mode = 2
 
+[node name="text" type="RichTextLabel" parent="."]
+offset_left = 367.0
+offset_top = 10.0
+offset_right = 718.0
+offset_bottom = 85.0
+text = "If you want to solve a square matrix, just fill out your matrix and leave others blank.
+"
+
 [connection signal="value_changed" from="MatrixSize" to="." method="_on_matrix_size_value_changed"]
 [connection signal="size_flags_changed" from="MatrixSizeText" to="." method="_on_rich_text_label_size_flags_changed"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="size_flags_changed" from="text" to="." method="_on_rich_text_label_size_flags_changed"]
