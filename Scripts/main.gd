@@ -18,7 +18,7 @@ var z: float
 
 func _on_matrix_size_value_changed(val):
 	# change the text of the matrix size to fit with new value
-	var size = matrixNode.sizeChange(val)
+	size = matrixNode.sizeChange(val)
 	$MatrixSizeText.text = "Matrix size: " + str(size) + "x" + str(size+1)
 	
 
